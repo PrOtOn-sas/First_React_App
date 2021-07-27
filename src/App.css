@@ -1,0 +1,349 @@
+.menu {
+    background-color: #45015d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu a:hover {
+    background-color: red;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.main {
+    margin-left: 360px;
+    margin-right: 40px;
+    margin-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+.images img {
+    width: 45%;
+    margin: 5px;
+    border-radius: 10px;
+    opacity: 0.7;
+    z-index: -100;
+    position: relative;
+}
+
+.images img:hover {
+    opacity: 1;
+}
+
+h2 {
+    color: #45015d;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+hr {
+    border: 4.7px solid #45015d;
+    border-radius: 4px;
+    border-left: none;
+    border-right: none;
+    background-color: #45015d
+}
+
+.member {
+    display: inline-block;
+    width: 30%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(30%);
+}
+
+.member img:hover {
+    filter: invert(100%);
+}
+
+.description {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 2px 16px 5px;
+}
+
+.member .position {
+    color: gray;
+}
+
+.package {
+    display: inline-block;
+    width: 49%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.package ul {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.package li {
+    list-style-type: none;
+    padding: 16px 0;
+    border-bottom: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.package .name {
+    background-color: #45015d;
+    color: white;
+    font-size: 24px;
+    padding: 32px 0;
+}
+
+.package .price {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.package .time {
+    opacity: 0.7
+}
+
+.package button {
+    background-color: white;
+    color: #45015d;
+    padding: 15px 20px;
+    border-radius: 20px;
+    outline: none;
+    cursor: not-allowed;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.package button:hover {
+    color: white;
+    background-color: #45015d;
+}
+
+.pro button {
+    background-color: #f44336;
+    color: white;
+}
+
+.pro .name {
+    background-color: #f44336;
+}
+
+footer {
+    text-align: right;
+    background-color: #f1f1f1;
+    padding: 32px 58px;
+    margin-top: 75px;
+}
+
+footer a {
+    text-decoration: overline underline;
+    color: black;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 600;
+}
+
+#contact button {
+    width: 100%;
+    padding: 5px 0;
+    background-color: #45015d;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
+
+#contact button:hover {
+    background-color: #f44336;
+    cursor: progress;
+}
+
+.menu_menu {
+    height: 50px;
+    background-color: #999;
+    width: 80%;
+    margin-left: 360px;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.menu_item {
+    color: #333
+        /*(serovaty)*/
+}
+
+.media_menu {
+    display: none;
+}
+
+@media(max-width:768px) {
+    .menu {
+        left: -100%;
+        transition: 1s;
+    }
+
+    .media_menu {
+        display: block;
+    }
+
+    #switch {
+        opacity: 0;
+    }
+
+    .menu_button {
+        display: flex;
+        align-items: center;
+        height: 26px;
+        width: 26px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    .menu_button > span,
+    .menu_button > span::before,
+    .menu_button > span::after {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #616161;
+        position: absolute;
+        transition-duration: 0.5s;
+        top: 3px;
+    }
+
+    .menu_button > span::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+    }
+
+    .menu_button > span::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+    }
+
+    /*
+    .menu_button > span::after {
+        content: "Лидер шёл, шёл а потом *ПУК* и сдох ХЫХЫХЫ";
+    }
+
+    .menu_button > span::before {
+        content: "Нам нужна стена! Очень высокая стена! - Говорил Трамп уезжая на курорт в Мексику"
+    }
+*/
+    .media_menu_list {
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        padding: 80px 0;
+        text-align: center;
+        background-color: #eceff1;
+        box-shadow: 1px 0px 6px RGBA(0, 0, 0, 0.2);
+        visibility: hidden;
+        transition: 0.5s;
+        /* transform: scale(0) */
+        left: -100%;
+    }
+
+    .menu_item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    li div {
+        display: none;
+    }
+
+    .menu_item:hover {
+        background-color: #cfd8dc;
+    }
+
+    .menu_item:hover + div {
+        display: block;
+    }
+
+    #switch:checked ~ .menu {
+        visibility: visible;
+        /* transform: scale(1) */
+        left: 0;
+    }
+
+    #switch:checked ~ .menu_button > span {
+        transform: rotate(45deg);
+    }
+
+    #switch:checked ~ .menu_button > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #switch:checked ~ .menu_button > span::before {
+        top: 0;
+    }
+
+    .main {
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .member {
+        width: 90%;
+    }
+
+    .package {
+        width: 90%;
+    }
+}
